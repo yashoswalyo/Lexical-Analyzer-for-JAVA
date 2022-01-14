@@ -17,20 +17,20 @@ from jLex import LexicalAnayzer
 x = LexicalAnalyzer("./input.java") #Takes file path as Input
 x.generateLexicalTable() 
 
-''' Ouputs following data to 'lexTable.txt'
-+--------+----------+------------+---------------+
-|  Line  |  Lexeme  |   Token    |  Token Value  |
-+--------+----------+------------+---------------+
-|   1    | public   | KEYWORD    |    (KW,24)    |
-|   1    | class    | KEYWORD    |    (KW,41)    |
-|   1    | input    | IDENTIFIER |    (ID,01)    |
-|   1    | {        | DELIMITER  |    (DL,03)    |
-|   2    | public   | KEYWORD    |    (KW,24)    |
-|   2    | static   | KEYWORD    |    (KW,39)    |
-	.		.			.
-	.		.			.
-	.		.			.
-'''
+## Ouputs following data to 'lexTable.txt'
+# +--------+----------+------------+---------------+
+# |  Line  |  Lexeme  |   Token    |  Token Value  |
+# +--------+----------+------------+---------------+
+# |   1    | public   | KEYWORD    |    (KW,24)    |
+# |   1    | class    | KEYWORD    |    (KW,41)    |
+# |   1    | input    | IDENTIFIER |    (ID,01)    |
+# |   1    | {        | DELIMITER  |    (DL,03)    |
+# |   2    | public   | KEYWORD    |    (KW,24)    |
+# |   2    | static   | KEYWORD    |    (KW,39)    |
+# 	.		.			.
+# 	.		.			.
+# 	.		.			.
+#
 ```
 <br>
 
