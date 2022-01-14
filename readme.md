@@ -3,14 +3,13 @@ A lexical Analyzer for Java created using Python. The program takes a java file 
 
 - DELIMITER
 - IDENTIFIER
+- KEYWORD
 - OPERATOR
 - CONSTANTS
-- KEYWORD
-<br>
 
 ## Execution Steps:
-1. Copy jLex.py to your project folder
-
+### Method 1 :
+1. Copy `jLex.py` to your project folder
 2. Do this in your file
 ```python
 from jLex import LexicalAnayzer
@@ -28,21 +27,15 @@ x.generateLexicalTable()
 |   1    | {        | DELIMITER  |    (DL,03)    |
 |   2    | public   | KEYWORD    |    (KW,24)    |
 |   2    | static   | KEYWORD    |    (KW,39)    |
-|   2    | void     | KEYWORD    |    (KW,40)    |
-|   2    | main     | IDENTIFIER |    (ID,02)    |
-|   2    | (        | DELIMITER  |    (DL,01)    |
-|   2    | String   | IDENTIFIER |    (ID,03)    |
-|   2    | args     | IDENTIFIER |    (ID,04)    |
-|   2    | [        | DELIMITER  |    (DL,10)    |
-|   2    | ]        | DELIMITER  |    (DL,11)    |
-|   2    | )        | DELIMITER  |    (DL,02)    |
-|   2    | {        | DELIMITER  |    (DL,03)    |
 	.		.			.
 	.		.			.
 	.		.			.
 '''
-*/
 ```
+<br>
 
-### Developer:
-- <a href="https://github.com/yashoswalyo">@yashoswalyo </a>
+### Method 2 :
+1. Run `python jLex.py -i input.java`
+2. Run `python jLex.py --help` for help
+## Developer:
+- Yash Oswal: <a href="https://github.com/yashoswalyo">@yashoswalyo </a>

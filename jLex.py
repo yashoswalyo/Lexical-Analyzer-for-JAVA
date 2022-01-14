@@ -1,5 +1,12 @@
+#!/bin/python3
+## Lexical Analyzer for JAVA in python
+## - ©️ yashoswalyo <yashoswal18@gmail.com>
+#
+
+from ast import arg
+import sys
 class LexicalAnalyzer():
-	def __init__(self,filePath:str) -> None:
+	def __init__(self,filePath:str):
 		self.filePath = filePath
 		self.input = open(filePath,mode="r")
 		self.output = open("lexTable.txt","w")
@@ -43,7 +50,7 @@ class LexicalAnalyzer():
 		self.lexeme = [[0,"","",""]]
 		self.IDENTIFIER = []
 
-	def generateLexicalTable(self):
+	def generateLexicalTable(self)->None:
 		LexicalAnalyzer.tokenize(self)
 		self.output.write("+--------+----------+------------+---------------+\n")
 		self.output.write("|  Line  |  Lexeme  |   Token    |  Token Value  |\n")
@@ -140,6 +147,28 @@ class LexicalAnalyzer():
 				]
 			)
 
-lex = LexicalAnalyzer("input.java")
-lex.generateLexicalTable()
-lex.generateSymbolTable()
+def banner():
+	print("yet")
+
+if __name__ == "__main__":
+	args = sys.argv
+	try:
+		if len(args) > 1:
+			if args[1] == '-h' or args[1] == '--help':
+				print("""\n\nUsage:-
+		python3 jLex.py -i file_path
+
+	Commands:-
+		-i, --input <file_path> :- Path of input file
+		-h, --help              :- Display help
+	""")
+			elif args[1] == "-i" or args[1] == "--input":
+				lex = LexicalAnalyzer(filePath=args[2])
+				lex.generateLexicalTable()
+				lex.generateSymbolTable()
+			else:
+				print("[-] Arguments not recognized\n Use -h or --help for help")
+		else:
+			print("[-] No Arguments passed\n Use -h or --help for help")
+	except Exception as e:
+		print(f"[-] {e}")
