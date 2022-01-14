@@ -7,6 +7,7 @@ A lexical Analyzer for Java created using Python. The program takes a java file 
 - CONSTANTS
 - KEYWORD
 <br>
+
 ## Execution Steps:
 1. Copy jLex.py to your project folder
 
